@@ -11,10 +11,15 @@ public class MainMenuScript : MonoBehaviour
     Button startButton, settingsButton, quitButton;
     [SerializeField]
     SettingsMenuScript settingsMenu;
-    
+    [SerializeField]
+    ChoosePanelScript choosePanel;
+
     void Start()
     {
-        startButton.onClick.AddListener(() => { SceneManager.LoadScene("Game"); });
+        startButton.onClick.AddListener(() => { 
+            choosePanel.gameObject.SetActive(true);
+            choosePanel.Clear();
+        });
         settingsButton.onClick.AddListener(() => { 
             gameObject.SetActive(false);
             settingsMenu.previousMenu = gameObject;
