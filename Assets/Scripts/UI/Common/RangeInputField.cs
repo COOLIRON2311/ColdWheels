@@ -3,37 +3,42 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
-using static System.Net.Mime.MediaTypeNames;
 
-public class RangeIntInputField : MonoBehaviour
+abstract public class RangeInputFiled<T> : MonoBehaviour
 {
-    public int minValue, maxValue;
-    public int defaultValue = 1;
+    public int min, max;
+    public T defaultValue = default(T);
     [SerializeField]
-    TMP_InputField inputField;
+    protected TMP_InputField inputField;
 
-    string previousInput = "";
-    int correctValue = 0;
-    bool previousValueCorrectness = true;
+    protected string previousInput = "";
+    protected T correctValue;
+    protected bool previousValueCorrectness = true;
 
     public Action onValueChanged;
 
     public bool HasCorrectValue { get => previousValueCorrectness; }
-    public int Value { get => correctValue; }
+    public T Value { get => correctValue; }
 
-    void Awake()
+    protected void Awake()
     {
+        correctValue = defaultValue;
+
         inputField = GetComponent<TMP_InputField>();
-        inputField.onValueChanged.AddListener(ValidateInput);
+        inputField.onValueChanged.AddListener((string value) =>
+        {
+            ValidateInput(value);
+            onValueChanged?.Invoke();
+        }
+        );
+
+        previousValueCorrectness = CheckInputValidness($"{defaultValue}", out _);
     }
 
-
-    private void ValidateInput(string input)
-    {
+    protected void ValidateInput(string input) {
         int previousLength = input.Length;
         input = input.Trim();
-        if (int.TryParse(input, out var value) && value >= minValue && value <= maxValue)
+        if (CheckInputValidness(input, out var value))
         {
             if (previousLength != input.Length)
             {
@@ -42,7 +47,9 @@ public class RangeIntInputField : MonoBehaviour
             previousInput = input;
             previousValueCorrectness = true;
             correctValue = value;
-        } else if (input.Length == 0) {
+        }
+        else if (input.Length == 0)
+        {
             previousInput = "";
             previousValueCorrectness = false;
             correctValue = defaultValue;
@@ -51,9 +58,9 @@ public class RangeIntInputField : MonoBehaviour
         {
             inputField.text = previousInput;
         }
-
-        onValueChanged?.Invoke();
     }
+
+    abstract protected bool CheckInputValidness(string input, out T value);
 
     public void Clear()
     {

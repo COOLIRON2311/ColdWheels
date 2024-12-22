@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -5,7 +6,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class ChoosePanelScript : MonoBehaviour
+public class PlayersNumberScript : MonoBehaviour
 {
     [SerializeField]
     TextMeshProUGUI maxPlayerText;
@@ -13,31 +14,32 @@ public class ChoosePanelScript : MonoBehaviour
     RangeIntInputField inputField;
     [SerializeField]
     Button applyButton, backButton;
-    [SerializeField]
-    PlayersManager playersManager;
-    
+
+    public Action OnApplyButtonClick, OnBackButtonClick;
+
     void Start()
     {
+        var playersManager = PlayersManager.Instance;
 
         maxPlayerText.text += $" {playersManager.MaxPlayers}";
 
-        inputField.minValue = 1;
-        inputField.maxValue = playersManager.MaxPlayers;
+        inputField.min = 1;
+        inputField.max = playersManager.MaxPlayers;
 
-        inputField.onValueChanged += () => { applyButton.enabled = inputField.HasCorrectValue; };
+        inputField.onValueChanged += () => { applyButton.interactable = inputField.HasCorrectValue; };
         applyButton.onClick.AddListener(() => {
             playersManager.PlayersCount = inputField.Value;
-            SceneManager.LoadScene("Game");
+            OnApplyButtonClick?.Invoke();
         });
 
-        backButton.onClick.AddListener(()=> { gameObject.SetActive(false); });
+        backButton.onClick.AddListener(() => { OnBackButtonClick?.Invoke(); });
 
         Clear();
     }
 
     public void Clear()
     {
-        applyButton.enabled = false;
+        applyButton.interactable = inputField.HasCorrectValue;
         inputField.Clear();
     }
 }

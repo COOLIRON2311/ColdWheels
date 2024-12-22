@@ -308,8 +308,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9338923cc6a45c84fa205ae97c14ee0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minValue: 0
-  maxValue: 0
+  min: 0
+  max: 0
   defaultValue: 1
   inputField: {fileID: 0}
 --- !u!114 &62672342
@@ -478,7 +478,7 @@ GameObject:
   - component: {fileID: 159103239}
   - component: {fileID: 159103238}
   m_Layer: 5
-  m_Name: Max Players Tex
+  m_Name: Max Players Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -523,7 +523,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u041C\u0430\u043A\u0441\u0438\u043C\u0443\u043C"
+  m_text: "\u041C\u0430\u043A\u0441\u0438\u043C\u0443\u043C:"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -611,12 +611,12 @@ PrefabInstance:
     - target: {fileID: 3846210890647751277, guid: b71605f1f5e1f7140878f71eefdf7949,
         type: 3}
       propertyPath: m_text
-      value: "\u0413\u043E\u0442\u043E\u0432\u043E"
+      value: "\u0414\u0430\u043B\u0435\u0435"
       objectReference: {fileID: 0}
     - target: {fileID: 6550757260287923971, guid: b71605f1f5e1f7140878f71eefdf7949,
         type: 3}
       propertyPath: m_Name
-      value: Ok Button
+      value: Next Button
       objectReference: {fileID: 0}
     - target: {fileID: 8212042612430480981, guid: b71605f1f5e1f7140878f71eefdf7949,
         type: 3}
@@ -1011,6 +1011,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxPlayers: 2
+  minPlayerNameLength: 1
+  maxPlayerNameLength: 10
 --- !u!4 &475266477
 Transform:
   m_ObjectHideFlags: 0
@@ -2499,11 +2501,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 749e4861c18638241bda0988b023aa85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxPlayerText: {fileID: 159103238}
-  inputField: {fileID: 62672341}
-  applyButton: {fileID: 107655159}
-  backButton: {fileID: 1462887180}
-  playersManager: {fileID: 475266476}
+  playerNumberScript: {fileID: 1564024755}
+  playerNameWindowPrefab: {fileID: 7853366670394322544, guid: 4a12cb701121d4d4cb5c5654dcf3c4e3,
+    type: 3}
 --- !u!114 &1015681810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3074,8 +3074,9 @@ GameObject:
   - component: {fileID: 1564024754}
   - component: {fileID: 1564024753}
   - component: {fileID: 1564024752}
+  - component: {fileID: 1564024755}
   m_Layer: 5
-  m_Name: Background
+  m_Name: Players Number
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3157,6 +3158,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1564024750}
   m_CullTransparentMesh: 1
+--- !u!114 &1564024755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1564024750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a6d406c31b1060418b8e308d9998593, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxPlayerText: {fileID: 159103238}
+  inputField: {fileID: 62672341}
+  applyButton: {fileID: 107655159}
+  backButton: {fileID: 1462887180}
 --- !u!1 &1588310077
 GameObject:
   m_ObjectHideFlags: 0
