@@ -180,7 +180,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &13411692
 Transform:
@@ -278,6 +278,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 4693825299639907105, guid: 66f97e68ed002b74f8e181d1c3108e14,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6792740760244198180, guid: 66f97e68ed002b74f8e181d1c3108e14,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7134596878844850964, guid: 66f97e68ed002b74f8e181d1c3108e14,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8160049463398649625, guid: 66f97e68ed002b74f8e181d1c3108e14,
         type: 3}
       propertyPath: m_Name
@@ -287,6 +302,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8160049463398649625, guid: 66f97e68ed002b74f8e181d1c3108e14,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8225268088695874782, guid: 66f97e68ed002b74f8e181d1c3108e14,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -386,6 +411,31 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 13411692}
     m_Modifications:
+    - target: {fileID: 45026976394459481, guid: bf49b486ffae2c2429b4fd41e96023c3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151257879967612850, guid: bf49b486ffae2c2429b4fd41e96023c3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 3756161127354694809, guid: bf49b486ffae2c2429b4fd41e96023c3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 3946090439241302661, guid: bf49b486ffae2c2429b4fd41e96023c3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4266165224925303483, guid: bf49b486ffae2c2429b4fd41e96023c3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8109696731558045351, guid: bf49b486ffae2c2429b4fd41e96023c3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -436,10 +486,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 7.511
       objectReference: {fileID: 0}
+    - target: {fileID: 8631077968458502330, guid: bf49b486ffae2c2429b4fd41e96023c3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 9189002782948893723, guid: bf49b486ffae2c2429b4fd41e96023c3,
         type: 3}
       propertyPath: m_Name
       value: Truck
+      objectReference: {fileID: 0}
+    - target: {fileID: 9189002782948893723, guid: bf49b486ffae2c2429b4fd41e96023c3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -515,6 +575,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Snow_Huge_Terrain_3
       objectReference: {fileID: 0}
+    - target: {fileID: 6541108166362057217, guid: aff32b642d1687d439fce29495ab9a83,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -534,6 +599,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 13411692}
     m_Modifications:
+    - target: {fileID: 938263979648159698, guid: 50bc8a305f45f224abedbbaaa3046911,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1428896154806819881, guid: 50bc8a305f45f224abedbbaaa3046911,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1598880563783459702, guid: 50bc8a305f45f224abedbbaaa3046911,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -584,10 +659,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -24.109
       objectReference: {fileID: 0}
+    - target: {fileID: 2447565566639454046, guid: 50bc8a305f45f224abedbbaaa3046911,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 3570916386208818676, guid: 50bc8a305f45f224abedbbaaa3046911,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8924721617483827851, guid: 50bc8a305f45f224abedbbaaa3046911,
         type: 3}
       propertyPath: m_Name
       value: Towtruck
+      objectReference: {fileID: 0}
+    - target: {fileID: 8924721617483827851, guid: 50bc8a305f45f224abedbbaaa3046911,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -687,6 +777,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 13411692}
     m_Modifications:
+    - target: {fileID: 938263979648159698, guid: 50bc8a305f45f224abedbbaaa3046911,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1428896154806819881, guid: 50bc8a305f45f224abedbbaaa3046911,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1598880563783459702, guid: 50bc8a305f45f224abedbbaaa3046911,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -737,10 +837,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2447565566639454046, guid: 50bc8a305f45f224abedbbaaa3046911,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 3570916386208818676, guid: 50bc8a305f45f224abedbbaaa3046911,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8924721617483827851, guid: 50bc8a305f45f224abedbbaaa3046911,
         type: 3}
       propertyPath: m_Name
       value: Towtruck
+      objectReference: {fileID: 0}
+    - target: {fileID: 8924721617483827851, guid: 50bc8a305f45f224abedbbaaa3046911,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -839,6 +954,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Fence (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 206275305016543907, guid: fea674385a3287548a08e59af8add84a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6150844513989055887, guid: fea674385a3287548a08e59af8add84a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6252196472904822866, guid: fea674385a3287548a08e59af8add84a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8192265248789922152, guid: fea674385a3287548a08e59af8add84a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8232354342762666270, guid: fea674385a3287548a08e59af8add84a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8617886480061556868, guid: fea674385a3287548a08e59af8add84a,
         type: 3}
@@ -1067,6 +1207,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 206275305016543907, guid: fea674385a3287548a08e59af8add84a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6150844513989055887, guid: fea674385a3287548a08e59af8add84a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6252196472904822866, guid: fea674385a3287548a08e59af8add84a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8192265248789922152, guid: fea674385a3287548a08e59af8add84a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8232354342762666270, guid: fea674385a3287548a08e59af8add84a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8617886480061556868, guid: fea674385a3287548a08e59af8add84a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1221,7 +1386,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &215767386
 Transform:
@@ -1310,6 +1475,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Snow_Huge_Terrain_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5206113657305031467, guid: 1c3dc1ecd9143e24ea74f578a73b59aa,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1408,6 +1578,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Snow_Big_Terrain_1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5819708780088505231, guid: b25764a0331bd7944be4304f66728490,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6595542415079500085, guid: b25764a0331bd7944be4304f66728490,
         type: 3}
@@ -1616,6 +1791,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 349097998}
+  - component: {fileID: 349097999}
   m_Layer: 0
   m_Name: Rig
   m_TagString: Untagged
@@ -1640,6 +1816,18 @@ Transform:
   - {fileID: 66782548}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &349097999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 349097997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 340a2afdbdb3966438b9b4615f874841, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &352807955
 GameObject:
   m_ObjectHideFlags: 0
@@ -1690,6 +1878,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 13411692}
     m_Modifications:
+    - target: {fileID: 204101444302569888, guid: 350735ef3b951a54ba6ec49c663c667e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 683930735519063769, guid: 350735ef3b951a54ba6ec49c663c667e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1740,10 +1933,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3818333531529157001, guid: 350735ef3b951a54ba6ec49c663c667e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6194196188313719325, guid: 350735ef3b951a54ba6ec49c663c667e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7151311968345750782, guid: 350735ef3b951a54ba6ec49c663c667e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 9181701585240893179, guid: 350735ef3b951a54ba6ec49c663c667e,
         type: 3}
       propertyPath: m_Name
       value: Van
+      objectReference: {fileID: 0}
+    - target: {fileID: 9181701585240893179, guid: 350735ef3b951a54ba6ec49c663c667e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2114,6 +2327,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 206275305016543907, guid: fea674385a3287548a08e59af8add84a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6150844513989055887, guid: fea674385a3287548a08e59af8add84a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6252196472904822866, guid: fea674385a3287548a08e59af8add84a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8192265248789922152, guid: fea674385a3287548a08e59af8add84a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8232354342762666270, guid: fea674385a3287548a08e59af8add84a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8617886480061556868, guid: fea674385a3287548a08e59af8add84a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2187,6 +2425,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Snow_Big_Terrain_1 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5819708780088505231, guid: b25764a0331bd7944be4304f66728490,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6595542415079500085, guid: b25764a0331bd7944be4304f66728490,
         type: 3}
@@ -2263,7 +2506,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &464467299
 Transform:
@@ -2524,6 +2767,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Snow_Huge_Terrain_1
       objectReference: {fileID: 0}
+    - target: {fileID: 5967143149383630888, guid: 2d5bbeaa1ec8caa4cb0ba4b6130f8afc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6450383613914159762, guid: 2d5bbeaa1ec8caa4cb0ba4b6130f8afc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2593,6 +2841,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 13411692}
     m_Modifications:
+    - target: {fileID: 1419998860113037823, guid: f40e52a0c26735a46b681671fb2baa40,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1807256897596988560, guid: f40e52a0c26735a46b681671fb2baa40,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2643,10 +2896,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 14.595
       objectReference: {fileID: 0}
+    - target: {fileID: 5115735495455736681, guid: f40e52a0c26735a46b681671fb2baa40,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6589659554022336100, guid: f40e52a0c26735a46b681671fb2baa40,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7606265029820296956, guid: f40e52a0c26735a46b681671fb2baa40,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7769690492283750692, guid: f40e52a0c26735a46b681671fb2baa40,
         type: 3}
       propertyPath: m_Name
       value: Hatchback
+      objectReference: {fileID: 0}
+    - target: {fileID: 7769690492283750692, guid: f40e52a0c26735a46b681671fb2baa40,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2739,6 +3012,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Snow_Huge_Terrain_4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3806300938002871800, guid: 8c3eca6dfc962ef4ba68aa3b7547d14c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4582802010358017858, guid: 8c3eca6dfc962ef4ba68aa3b7547d14c,
         type: 3}
@@ -2864,6 +3142,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Snow_Huge_Terrain_3
       objectReference: {fileID: 0}
+    - target: {fileID: 6541108166362057217, guid: aff32b642d1687d439fce29495ab9a83,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2883,6 +3166,31 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 13411692}
     m_Modifications:
+    - target: {fileID: 45026976394459481, guid: bf49b486ffae2c2429b4fd41e96023c3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151257879967612850, guid: bf49b486ffae2c2429b4fd41e96023c3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 3756161127354694809, guid: bf49b486ffae2c2429b4fd41e96023c3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 3946090439241302661, guid: bf49b486ffae2c2429b4fd41e96023c3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4266165224925303483, guid: bf49b486ffae2c2429b4fd41e96023c3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8109696731558045351, guid: bf49b486ffae2c2429b4fd41e96023c3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2933,10 +3241,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8631077968458502330, guid: bf49b486ffae2c2429b4fd41e96023c3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 9189002782948893723, guid: bf49b486ffae2c2429b4fd41e96023c3,
         type: 3}
       propertyPath: m_Name
       value: Truck
+      objectReference: {fileID: 0}
+    - target: {fileID: 9189002782948893723, guid: bf49b486ffae2c2429b4fd41e96023c3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3105,6 +3423,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 13411692}
     m_Modifications:
+    - target: {fileID: 1419998860113037823, guid: f40e52a0c26735a46b681671fb2baa40,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1807256897596988560, guid: f40e52a0c26735a46b681671fb2baa40,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3155,10 +3478,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5115735495455736681, guid: f40e52a0c26735a46b681671fb2baa40,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6589659554022336100, guid: f40e52a0c26735a46b681671fb2baa40,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7606265029820296956, guid: f40e52a0c26735a46b681671fb2baa40,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7769690492283750692, guid: f40e52a0c26735a46b681671fb2baa40,
         type: 3}
       propertyPath: m_Name
       value: Hatchback
+      objectReference: {fileID: 0}
+    - target: {fileID: 7769690492283750692, guid: f40e52a0c26735a46b681671fb2baa40,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3183,6 +3526,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Snow_Small_Terrain_5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1349708541309175118, guid: c58819078a2c69941be7ac6f863b6c13,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1869258178881593332, guid: c58819078a2c69941be7ac6f863b6c13,
         type: 3}
@@ -3455,6 +3803,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Snow_Big_Terrain_1 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5819708780088505231, guid: b25764a0331bd7944be4304f66728490,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6595542415079500085, guid: b25764a0331bd7944be4304f66728490,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3578,6 +3931,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Snow_Small_Terrain_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5549706032755499028, guid: 16145b4707f791843830c2bb89dcf6ef,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3998,10 +4356,35 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4693825299639907105, guid: 66f97e68ed002b74f8e181d1c3108e14,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6792740760244198180, guid: 66f97e68ed002b74f8e181d1c3108e14,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7134596878844850964, guid: 66f97e68ed002b74f8e181d1c3108e14,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8160049463398649625, guid: 66f97e68ed002b74f8e181d1c3108e14,
         type: 3}
       propertyPath: m_Name
       value: Taxi
+      objectReference: {fileID: 0}
+    - target: {fileID: 8160049463398649625, guid: 66f97e68ed002b74f8e181d1c3108e14,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8225268088695874782, guid: 66f97e68ed002b74f8e181d1c3108e14,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4101,6 +4484,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Snow_Huge_Terrain_4
       objectReference: {fileID: 0}
+    - target: {fileID: 3806300938002871800, guid: 8c3eca6dfc962ef4ba68aa3b7547d14c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4582802010358017858, guid: 8c3eca6dfc962ef4ba68aa3b7547d14c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4174,6 +4562,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Fence (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 206275305016543907, guid: fea674385a3287548a08e59af8add84a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6150844513989055887, guid: fea674385a3287548a08e59af8add84a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6252196472904822866, guid: fea674385a3287548a08e59af8add84a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8192265248789922152, guid: fea674385a3287548a08e59af8add84a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8232354342762666270, guid: fea674385a3287548a08e59af8add84a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8617886480061556868, guid: fea674385a3287548a08e59af8add84a,
         type: 3}
@@ -4397,6 +4810,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Snow_Big_Terrain_1
       objectReference: {fileID: 0}
+    - target: {fileID: 5819708780088505231, guid: b25764a0331bd7944be4304f66728490,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6595542415079500085, guid: b25764a0331bd7944be4304f66728490,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4471,6 +4889,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Snow_Small_Terrain_6
       objectReference: {fileID: 0}
+    - target: {fileID: 1582095990421065754, guid: 87ef003622738824898df94e51e6f40a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2215607495973292704, guid: 87ef003622738824898df94e51e6f40a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4544,6 +4967,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Snow_Small_Terrain_5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1349708541309175118, guid: c58819078a2c69941be7ac6f863b6c13,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1869258178881593332, guid: c58819078a2c69941be7ac6f863b6c13,
         type: 3}
@@ -4693,6 +5121,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 13411692}
     m_Modifications:
+    - target: {fileID: 938263979648159698, guid: 50bc8a305f45f224abedbbaaa3046911,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1428896154806819881, guid: 50bc8a305f45f224abedbbaaa3046911,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1598880563783459702, guid: 50bc8a305f45f224abedbbaaa3046911,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4743,10 +5181,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -43.755
       objectReference: {fileID: 0}
+    - target: {fileID: 2447565566639454046, guid: 50bc8a305f45f224abedbbaaa3046911,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 3570916386208818676, guid: 50bc8a305f45f224abedbbaaa3046911,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8924721617483827851, guid: 50bc8a305f45f224abedbbaaa3046911,
         type: 3}
       propertyPath: m_Name
       value: Towtruck
+      objectReference: {fileID: 0}
+    - target: {fileID: 8924721617483827851, guid: 50bc8a305f45f224abedbbaaa3046911,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4901,6 +5354,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Snow_Huge_Terrain_3
       objectReference: {fileID: 0}
+    - target: {fileID: 6541108166362057217, guid: aff32b642d1687d439fce29495ab9a83,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4924,6 +5382,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Fence (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 206275305016543907, guid: fea674385a3287548a08e59af8add84a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6150844513989055887, guid: fea674385a3287548a08e59af8add84a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6252196472904822866, guid: fea674385a3287548a08e59af8add84a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8192265248789922152, guid: fea674385a3287548a08e59af8add84a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8232354342762666270, guid: fea674385a3287548a08e59af8add84a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8617886480061556868, guid: fea674385a3287548a08e59af8add84a,
         type: 3}
@@ -5117,6 +5600,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 206275305016543907, guid: fea674385a3287548a08e59af8add84a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6150844513989055887, guid: fea674385a3287548a08e59af8add84a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6252196472904822866, guid: fea674385a3287548a08e59af8add84a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8192265248789922152, guid: fea674385a3287548a08e59af8add84a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8232354342762666270, guid: fea674385a3287548a08e59af8add84a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8617886480061556868, guid: fea674385a3287548a08e59af8add84a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5260,6 +5768,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 13411692}
     m_Modifications:
+    - target: {fileID: 204101444302569888, guid: 350735ef3b951a54ba6ec49c663c667e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 683930735519063769, guid: 350735ef3b951a54ba6ec49c663c667e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5310,10 +5823,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3818333531529157001, guid: 350735ef3b951a54ba6ec49c663c667e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6194196188313719325, guid: 350735ef3b951a54ba6ec49c663c667e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7151311968345750782, guid: 350735ef3b951a54ba6ec49c663c667e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 9181701585240893179, guid: 350735ef3b951a54ba6ec49c663c667e,
         type: 3}
       propertyPath: m_Name
       value: Van
+      objectReference: {fileID: 0}
+    - target: {fileID: 9181701585240893179, guid: 350735ef3b951a54ba6ec49c663c667e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5458,10 +5991,35 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2268291853166280684, guid: 813df9801c30e63479934f054db68d12,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053335324125489642, guid: 813df9801c30e63479934f054db68d12,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6452039197999972492, guid: 813df9801c30e63479934f054db68d12,
         type: 3}
       propertyPath: m_Name
       value: Police
+      objectReference: {fileID: 0}
+    - target: {fileID: 6452039197999972492, guid: 813df9801c30e63479934f054db68d12,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6685709738900195085, guid: 813df9801c30e63479934f054db68d12,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7347992844397126573, guid: 813df9801c30e63479934f054db68d12,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5491,7 +6049,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1449794650
 Transform:
@@ -5588,6 +6146,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 13411692}
     m_Modifications:
+    - target: {fileID: 204101444302569888, guid: 350735ef3b951a54ba6ec49c663c667e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 683930735519063769, guid: 350735ef3b951a54ba6ec49c663c667e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5638,10 +6201,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3818333531529157001, guid: 350735ef3b951a54ba6ec49c663c667e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6194196188313719325, guid: 350735ef3b951a54ba6ec49c663c667e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7151311968345750782, guid: 350735ef3b951a54ba6ec49c663c667e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 9181701585240893179, guid: 350735ef3b951a54ba6ec49c663c667e,
         type: 3}
       propertyPath: m_Name
       value: Van
+      objectReference: {fileID: 0}
+    - target: {fileID: 9181701585240893179, guid: 350735ef3b951a54ba6ec49c663c667e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5820,6 +6403,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 206275305016543907, guid: fea674385a3287548a08e59af8add84a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6150844513989055887, guid: fea674385a3287548a08e59af8add84a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6252196472904822866, guid: fea674385a3287548a08e59af8add84a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8192265248789922152, guid: fea674385a3287548a08e59af8add84a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8232354342762666270, guid: fea674385a3287548a08e59af8add84a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8617886480061556868, guid: fea674385a3287548a08e59af8add84a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5893,6 +6501,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Snow_Big_Terrain_1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5819708780088505231, guid: b25764a0331bd7944be4304f66728490,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6595542415079500085, guid: b25764a0331bd7944be4304f66728490,
         type: 3}
@@ -6182,6 +6795,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Snow_Huge_Terrain_5
       objectReference: {fileID: 0}
+    - target: {fileID: 5655587321306893513, guid: 04e7ba386e77f1d4f8b3b64831b7a255,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6360,6 +6978,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 13411692}
     m_Modifications:
+    - target: {fileID: 204101444302569888, guid: 350735ef3b951a54ba6ec49c663c667e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 683930735519063769, guid: 350735ef3b951a54ba6ec49c663c667e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6410,10 +7033,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 14.745
       objectReference: {fileID: 0}
+    - target: {fileID: 3818333531529157001, guid: 350735ef3b951a54ba6ec49c663c667e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6194196188313719325, guid: 350735ef3b951a54ba6ec49c663c667e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7151311968345750782, guid: 350735ef3b951a54ba6ec49c663c667e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 9181701585240893179, guid: 350735ef3b951a54ba6ec49c663c667e,
         type: 3}
       propertyPath: m_Name
       value: Van
+      objectReference: {fileID: 0}
+    - target: {fileID: 9181701585240893179, guid: 350735ef3b951a54ba6ec49c663c667e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6488,6 +7131,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Snow_Huge_Terrain_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5206113657305031467, guid: 1c3dc1ecd9143e24ea74f578a73b59aa,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6586,6 +7234,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Fence (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 206275305016543907, guid: fea674385a3287548a08e59af8add84a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6150844513989055887, guid: fea674385a3287548a08e59af8add84a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6252196472904822866, guid: fea674385a3287548a08e59af8add84a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8192265248789922152, guid: fea674385a3287548a08e59af8add84a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8232354342762666270, guid: fea674385a3287548a08e59af8add84a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8617886480061556868, guid: fea674385a3287548a08e59af8add84a,
         type: 3}
@@ -6734,6 +7407,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Snow_Huge_Terrain_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5967143149383630888, guid: 2d5bbeaa1ec8caa4cb0ba4b6130f8afc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6450383613914159762, guid: 2d5bbeaa1ec8caa4cb0ba4b6130f8afc,
         type: 3}
@@ -6933,6 +7611,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Snow_Huge_Terrain_5
       objectReference: {fileID: 0}
+    - target: {fileID: 5655587321306893513, guid: 04e7ba386e77f1d4f8b3b64831b7a255,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7002,10 +7685,35 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2268291853166280684, guid: 813df9801c30e63479934f054db68d12,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053335324125489642, guid: 813df9801c30e63479934f054db68d12,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6452039197999972492, guid: 813df9801c30e63479934f054db68d12,
         type: 3}
       propertyPath: m_Name
       value: Police
+      objectReference: {fileID: 0}
+    - target: {fileID: 6452039197999972492, guid: 813df9801c30e63479934f054db68d12,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6685709738900195085, guid: 813df9801c30e63479934f054db68d12,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7347992844397126573, guid: 813df9801c30e63479934f054db68d12,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7111,7 +7819,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1834878892
 Transform:
@@ -7311,6 +8019,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Snow_Small_Terrain_6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1582095990421065754, guid: 87ef003622738824898df94e51e6f40a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2215607495973292704, guid: 87ef003622738824898df94e51e6f40a,
         type: 3}
@@ -7777,6 +8490,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Snow_Small_Terrain_6
       objectReference: {fileID: 0}
+    - target: {fileID: 1582095990421065754, guid: 87ef003622738824898df94e51e6f40a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2215607495973292704, guid: 87ef003622738824898df94e51e6f40a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7850,6 +8568,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Fence (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 206275305016543907, guid: fea674385a3287548a08e59af8add84a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6150844513989055887, guid: fea674385a3287548a08e59af8add84a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6252196472904822866, guid: fea674385a3287548a08e59af8add84a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8192265248789922152, guid: fea674385a3287548a08e59af8add84a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8232354342762666270, guid: fea674385a3287548a08e59af8add84a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8617886480061556868, guid: fea674385a3287548a08e59af8add84a,
         type: 3}
@@ -7970,10 +8713,35 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -11.05
       objectReference: {fileID: 0}
+    - target: {fileID: 4693825299639907105, guid: 66f97e68ed002b74f8e181d1c3108e14,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6792740760244198180, guid: 66f97e68ed002b74f8e181d1c3108e14,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7134596878844850964, guid: 66f97e68ed002b74f8e181d1c3108e14,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8160049463398649625, guid: 66f97e68ed002b74f8e181d1c3108e14,
         type: 3}
       propertyPath: m_Name
       value: Taxi
+      objectReference: {fileID: 0}
+    - target: {fileID: 8160049463398649625, guid: 66f97e68ed002b74f8e181d1c3108e14,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8225268088695874782, guid: 66f97e68ed002b74f8e181d1c3108e14,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8049,6 +8817,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Snow_Medium_Terrain_3
       objectReference: {fileID: 0}
+    - target: {fileID: 5619949138663897988, guid: 3e3a9d3cd4c287c42834088917344328,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8074,7 +8847,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2140853953
 Transform:
@@ -8184,6 +8957,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Fence
+      objectReference: {fileID: 0}
+    - target: {fileID: 206275305016543907, guid: fea674385a3287548a08e59af8add84a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6150844513989055887, guid: fea674385a3287548a08e59af8add84a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6252196472904822866, guid: fea674385a3287548a08e59af8add84a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8192265248789922152, guid: fea674385a3287548a08e59af8add84a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8232354342762666270, guid: fea674385a3287548a08e59af8add84a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8617886480061556868, guid: fea674385a3287548a08e59af8add84a,
         type: 3}
