@@ -5,17 +5,11 @@ using UnityEngine;
 public class Sprite : MonoBehaviour
 {
     [SerializeField] Camera cam;
-    private Vector3 scale;
-    void Start()
-    {
-        scale = new(0, 1, 1);
-    }
 
     void Update()
     {
-        transform.LookAt(cam.transform.position);
-        Vector3 rotation = transform.eulerAngles;
-        rotation.Scale(scale);
-        transform.eulerAngles = rotation;
+        Vector3 directionToCamera = cam.transform.position - transform.position;
+        directionToCamera.y = 0;
+        transform.rotation = Quaternion.LookRotation(-directionToCamera);
     }
 }
