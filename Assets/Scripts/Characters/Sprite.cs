@@ -10,6 +10,6 @@ public class Sprite : MonoBehaviour
     {
         Vector3 directionToCamera = cam.transform.position - transform.position;
         directionToCamera.y = 0;
-        transform.rotation = Quaternion.LookRotation(-directionToCamera);
+        transform.rotation = Quaternion.LookRotation(directionToCamera);
     }
 }
