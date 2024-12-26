@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
@@ -15,55 +16,80 @@ public class PlayerController : MonoBehaviour
     [Header("Movement Settings")]
     public float speed = 5f; 
 
+    private bool controls = true;
     private float currentSpeed = 0f;
     private Rigidbody rb;
-    private bool isLaunched = false;
-    private float chargeTime;
+
+    private Vector3 lastPos;
+    private float lastTurnAngle;
+    private float turnAngle;
 
     void Start()
     {
+        lastPos = transform.position;
         rb = GetComponentInChildren<Rigidbody>();
     }
 
-    void Update() 
+    void Update()
     {
+        var lerpValue = (Time.time - Time.fixedTime) / Time.fixedDeltaTime;
+        carMesh.transform.position = Vector3.Lerp(lastPos, transform.position, lerpValue);
+        var lastTurnAngleQuat = Quaternion.Euler(0, lastTurnAngle, 0);
+        var turnAngleQuat = Quaternion.Euler(0, turnAngle, 0);
+        carMesh.transform.localRotation = Quaternion.Lerp(lastTurnAngleQuat, turnAngleQuat, lerpValue); 
+    }
+
+    void FixedUpdate() 
+    {
+        if (!controls && currentSpeed <= 0)
+        {
+            DirectorScript.Instance.EndPlayerTurn(gameObject);
+            enabled = false;
+            return;
+        }
         HandleImpulseCharge();
         HandleMovement();
+        lastPos = transform.position;
     }
 
     void HandleImpulseCharge()
     {
-        if(Input.GetKey(KeyCode.Space))
+        if (controls && Input.GetKey(KeyCode.Space))
         {
-            currentSpeed += acceleration * Time.deltaTime;
+            currentSpeed += acceleration * Time.fixedDeltaTime;
             currentSpeed = Mathf.Clamp(currentSpeed, 0, maxSpeed);
             
         }
         else
         {
-            currentSpeed -= deceleration * Time.deltaTime;
+            currentSpeed -= deceleration * Time.fixedDeltaTime;
             currentSpeed = Mathf.Max(currentSpeed, 0);
         }
-        Vector3 forwardMovement = Vector3.forward * currentSpeed * Time.deltaTime;
+        Vector3 forwardMovement = Vector3.forward * currentSpeed * Time.fixedDeltaTime;
         rb.MovePosition(rb.position + forwardMovement);
     }
 
     void HandleMovement()
     {
         float horizontalInput = Input.GetAxis("Horizontal");
-        Vector3 movement = Vector3.right * horizontalInput * speed * Time.deltaTime;
+        Vector3 movement = Vector3.right * horizontalInput * speed * Time.fixedDeltaTime;
         rb.MovePosition(rb.position + movement);
 
-        float turnAngle = horizontalInput * 30f; 
-        Quaternion targetRotation = Quaternion.Euler(0, turnAngle, 0);
-        carMesh.transform.rotation = Quaternion.Lerp(carMesh.transform.rotation, targetRotation, Time.deltaTime * 5f); 
+        lastTurnAngle = turnAngle;
+        turnAngle = horizontalInput * 30f; 
     }
     private void OnTriggerEnter(Collider other) 
     {
-        if(other.CompareTag("LoseCollider"))
+        if (other.CompareTag("DisableControls"))
         {
-            Debug.Log("you lose");
+            controls = false;
         }
+    }
+
+    private void OnDisable()
+    {
+        carMesh.transform.localPosition = Vector3.zero;
+        carMesh.transform.localRotation = Quaternion.identity;
     }
 }
 

@@ -22,12 +22,13 @@ public class SmoothFollowCamera : MonoBehaviour
         transform.position = smoothedPosition;
 
         // Поворачиваем камеру в сторону направления target.forward
-        var targetRotation = Quaternion.LookRotation(target.forward);
+        // var targetRotation = Quaternion.LookRotation(target.forward);
 
         // Добавляем наклон по оси X
-        var tiltedRotation = targetRotation * Quaternion.Euler(20, 0, 0);
+        // var tiltedRotation = targetRotation * Quaternion.Euler(20, 0, 0);
+        transform.LookAt(target);
 
         // Плавно интерполируем вращение камеры
-        transform.rotation = Quaternion.Lerp(transform.rotation, tiltedRotation, smoothSpeed);
+        // transform.rotation = Quaternion.Lerp(transform.rotation, tiltedRotation, smoothSpeed);
     }
 }

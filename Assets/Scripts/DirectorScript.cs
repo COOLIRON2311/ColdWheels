@@ -71,7 +71,7 @@ public class DirectorScript : MonoBehaviour
     private IEnumerator OnPlayerTurnStarted()
     {
         playerGo = Instantiate(playerPrefab, spawnPointGo.transform.position, Quaternion.identity);
-        smoothFollowCamera.target = playerGo.transform;
+        smoothFollowCamera.target = playerGo.transform.GetChild(0);
         activeGameplay = true;
         yield break;
     }
@@ -102,7 +102,7 @@ public class DirectorScript : MonoBehaviour
 
     private IEnumerator OnPlayerTurnEnded()
     {
-        playerGo.GetComponent<SimpleController>().enabled = false;
+        playerGo.GetComponent<PlayerController>().enabled = false;
         playerGo = null;
         yield return new WaitForSeconds(1.0f);
         if (currentPlayerIdx + 1 >= PlayerCreator.Instance.MaxPlayers)
