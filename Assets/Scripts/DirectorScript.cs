@@ -15,6 +15,7 @@ public class DirectorScript : MonoBehaviour
     private SmoothFollowCamera smoothFollowCamera;
     private GameObject spawnPointGo;
     private GameObject trackGo;
+    private GameObject playerGo;
     
     private int currentTrackIdx;
     private int currentPlayerIdx;
@@ -69,7 +70,7 @@ public class DirectorScript : MonoBehaviour
 
     private IEnumerator OnPlayerTurnStarted()
     {
-        var playerGo = Instantiate(playerPrefab, spawnPointGo.transform.position, Quaternion.identity);
+        playerGo = Instantiate(playerPrefab, spawnPointGo.transform.position, Quaternion.identity);
         smoothFollowCamera.target = playerGo.transform;
         activeGameplay = true;
         yield break;
@@ -91,8 +92,9 @@ public class DirectorScript : MonoBehaviour
         StartCoroutine(OnPlayerTurnStarted());
     }
 
-    public void EndPlayerTurn()
+    public void EndPlayerTurn(GameObject player = null)
     {
+        if (player && player != playerGo) return;
         if (!activeGameplay) return;
         activeGameplay = false;
         StartCoroutine(OnPlayerTurnEnded());
@@ -100,6 +102,8 @@ public class DirectorScript : MonoBehaviour
 
     private IEnumerator OnPlayerTurnEnded()
     {
+        playerGo.GetComponent<SimpleController>().enabled = false;
+        playerGo = null;
         yield return new WaitForSeconds(1.0f);
         if (currentPlayerIdx + 1 >= PlayerCreator.Instance.MaxPlayers)
         {
