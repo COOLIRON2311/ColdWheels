@@ -7,14 +7,16 @@ public class DirectorScript : MonoBehaviour
 {
     public static DirectorScript Instance { get; private set; }
 
-    [SerializeField] private List<string> maps = new();
+    [SerializeField] private List<GameObject> trackPrefabs = new();
     [SerializeField] private GameObject playerPrefab;
     [SerializeField] private GameObject scoreboardPrefab;
 
     private Camera camera_;
+    private SmoothFollowCamera smoothFollowCamera;
     private GameObject spawnPointGo;
+    private GameObject trackGo;
     
-    private int currentMapIdx;
+    private int currentTrackIdx;
     private int currentPlayerIdx;
     private bool activeGameplay;
 
@@ -26,6 +28,14 @@ public class DirectorScript : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            EndPlayerTurn();
+        }
+    }
+
     public void StartGame()
     {
         StartCoroutine(OnGameStarted());
@@ -33,8 +43,8 @@ public class DirectorScript : MonoBehaviour
     
     private IEnumerator OnGameStarted()
     {
-        currentMapIdx = 0;
-        SceneManager.LoadScene(maps[currentMapIdx]);
+        currentTrackIdx = 0;
+        SceneManager.LoadScene(1);
         yield return null;
         StartCoroutine(OnMapStarted());
     }
@@ -42,23 +52,32 @@ public class DirectorScript : MonoBehaviour
     // ReSharper disable Unity.PerformanceAnalysis
     private IEnumerator OnMapStarted()
     {
-        print(SceneManager.GetActiveScene().name);
         currentPlayerIdx = 0;
+        trackGo = Instantiate(trackPrefabs[currentTrackIdx]);
         spawnPointGo = GameObject.FindWithTag("SpawnPoint");
         camera_ = Camera.main;
+        smoothFollowCamera = camera_!.GetComponent<SmoothFollowCamera>();
+        if (!smoothFollowCamera)
+        {
+            smoothFollowCamera = camera_.gameObject.AddComponent<SmoothFollowCamera>();
+            smoothFollowCamera.smoothSpeed = 0.125f;
+            smoothFollowCamera.cameraOffset = new Vector3(0, 4, -8);
+        }
+        yield return new WaitForSeconds(0.25f);
         StartCoroutine(OnPlayerTurnStarted());
-        yield break;
     }
 
     private IEnumerator OnPlayerTurnStarted()
     {
-        Instantiate(playerPrefab, spawnPointGo.transform.position, Quaternion.identity);
+        var playerGo = Instantiate(playerPrefab, spawnPointGo.transform.position, Quaternion.identity);
+        smoothFollowCamera.target = playerGo.transform;
         activeGameplay = true;
         yield break;
     }
 
     private IEnumerator ProcessCamera(float duration = 1.0f)
     {
+        smoothFollowCamera.target = null;
         var startPosition = camera_.transform.position;
         var endPosition = spawnPointGo.transform.position;
         var elapsedTime = 0f;
@@ -75,8 +94,8 @@ public class DirectorScript : MonoBehaviour
     public void EndPlayerTurn()
     {
         if (!activeGameplay) return;
-        StartCoroutine(OnPlayerTurnEnded());
         activeGameplay = false;
+        StartCoroutine(OnPlayerTurnEnded());
     }
 
     private IEnumerator OnPlayerTurnEnded()
@@ -89,7 +108,7 @@ public class DirectorScript : MonoBehaviour
         else
         {
             currentPlayerIdx++;
-            StartCoroutine(ProcessCamera());
+            StartCoroutine(OnPlayerTurnStarted());
         }
     }
 
@@ -98,14 +117,14 @@ public class DirectorScript : MonoBehaviour
         spawnPointGo = null;
         camera_ = null;
         yield return new WaitForSeconds(1.0f);
-        if (currentMapIdx + 1 >= maps.Count)
+        if (currentTrackIdx + 1 >= trackPrefabs.Count)
         {
             StartCoroutine(OnGameEnded());
         }
         else
         {
-            currentMapIdx++;
-            SceneManager.LoadScene(maps[currentMapIdx]);
+            currentTrackIdx++;
+            Destroy(trackGo);
             yield return null;
             StartCoroutine(OnMapStarted());
         }
@@ -113,15 +132,16 @@ public class DirectorScript : MonoBehaviour
 
     private IEnumerator OnGameEnded()
     {
-        if (scoreboardPrefab != null)
+        if (scoreboardPrefab)
         {
             Instantiate(scoreboardPrefab, Vector3.zero, Quaternion.identity);
         }
         else
         {
-            print("Game Ended");
+            print("Game Ended: quit to main menu in 4 seconds");
+            yield return new WaitForSeconds(4.0f);
+            SceneManager.LoadScene(0);
         }
-        yield break;
     }
 
 }
