@@ -40,7 +40,7 @@ public class ChoosePanelScript : MonoBehaviour
             playerNameScript.OnApplyButtonClick += () =>
             {
                 SoundController.Instance.StopMusic();
-                SceneManager.LoadScene("Game");
+                DirectorScript.Instance.StartGame();
             };
             playerNameScript.SetApplyButtonText("Готово");
         }

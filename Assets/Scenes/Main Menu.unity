@@ -1189,6 +1189,7 @@ GameObject:
   - component: {fileID: 461650390}
   - component: {fileID: 461650389}
   - component: {fileID: 461650388}
+  - component: {fileID: 461650391}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1437,6 +1438,26 @@ MonoBehaviour:
   phonkMusic:
   - {fileID: 8300000, guid: 4f6243a3fecf8574faae4cd7a74d784e, type: 3}
   - {fileID: 8300000, guid: fc3717f063e4cf24caed60b61d993043, type: 3}
+--- !u!114 &461650391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 461650385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 739822d2007befdc8b07a1de1615b543, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trackPrefabs:
+  - {fileID: 3971460630435187623, guid: 14339fc123fd30a4b8610953990f09dc, type: 3}
+  - {fileID: 4830845817065153081, guid: fd8f12b2af876864ca0cb8c6122d5dc1, type: 3}
+  - {fileID: 6490094545549448119, guid: 0fd3c469c3b1ff848ba5308c6dfc047c, type: 3}
+  playerPrefab: {fileID: 8160049463398649625, guid: d723158481451dd4380d123a248dd712,
+    type: 3}
+  scoreboardPrefab: {fileID: 1773871734005605396, guid: 7aeb9489296ebb75db1d02dba0fbe674,
+    type: 3}
 --- !u!1 &469835751
 GameObject:
   m_ObjectHideFlags: 0
