@@ -1454,7 +1454,7 @@ MonoBehaviour:
   - {fileID: 3971460630435187623, guid: 14339fc123fd30a4b8610953990f09dc, type: 3}
   - {fileID: 4830845817065153081, guid: fd8f12b2af876864ca0cb8c6122d5dc1, type: 3}
   - {fileID: 6490094545549448119, guid: 0fd3c469c3b1ff848ba5308c6dfc047c, type: 3}
-  playerPrefab: {fileID: 8160049463398649625, guid: d723158481451dd4380d123a248dd712,
+  playerPrefab: {fileID: 7183069578657883599, guid: 28c0d2e3b9e027ae580029db80889a0d,
     type: 3}
   scoreboardPrefab: {fileID: 1773871734005605396, guid: 7aeb9489296ebb75db1d02dba0fbe674,
     type: 3}
