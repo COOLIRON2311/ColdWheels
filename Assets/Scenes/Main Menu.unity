@@ -1189,6 +1189,7 @@ GameObject:
   - component: {fileID: 461650390}
   - component: {fileID: 461650389}
   - component: {fileID: 461650388}
+  - component: {fileID: 461650391}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1437,6 +1438,24 @@ MonoBehaviour:
   phonkMusic:
   - {fileID: 8300000, guid: 4f6243a3fecf8574faae4cd7a74d784e, type: 3}
   - {fileID: 8300000, guid: fc3717f063e4cf24caed60b61d993043, type: 3}
+--- !u!114 &461650391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 461650385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 739822d2007befdc8b07a1de1615b543, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maps:
+  - Game
+  playerPrefab: {fileID: 8160049463398649625, guid: d723158481451dd4380d123a248dd712,
+    type: 3}
+  cameraDistance: 2.5
+  scoreboardPrefab: {fileID: 0}
 --- !u!1 &469835751
 GameObject:
   m_ObjectHideFlags: 0
