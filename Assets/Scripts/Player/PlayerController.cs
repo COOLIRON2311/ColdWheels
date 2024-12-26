@@ -58,7 +58,13 @@ public class PlayerController : MonoBehaviour
         Quaternion targetRotation = Quaternion.Euler(0, turnAngle, 0);
         carMesh.transform.rotation = Quaternion.Lerp(carMesh.transform.rotation, targetRotation, Time.deltaTime * 5f); 
     }
-
+    private void OnTriggerEnter(Collider other) 
+    {
+        if(other.CompareTag("LoseCollider"))
+        {
+            Debug.Log("you lose");
+        }
+    }
 }
 
 
