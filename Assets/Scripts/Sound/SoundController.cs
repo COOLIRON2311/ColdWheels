@@ -35,9 +35,6 @@ public class SoundController : MonoBehaviour
         }
     }
 
-
-    private static readonly System.Random random = new();
-
     public static float? effectsVolume;
     public static float? musicVolume;
 
@@ -75,7 +72,7 @@ public class SoundController : MonoBehaviour
         AudioClip music = musicType switch
         {
             MusicType.MainMenu => menuMusic,
-            MusicType.Phonk => RandomListItem(phonkMusic),
+            MusicType.Phonk => Util.RandomListItem(phonkMusic),
             _ => null
         };
 
@@ -110,13 +107,7 @@ public class SoundController : MonoBehaviour
 
     public void PlayCrashSound()
     {
-        effectsSource.PlayOneShot(RandomListItem(crashSounds));
-    }
-
-    private static T RandomListItem<T>(List<T> lst)
-    {
-        int idx = random.Next(0, lst.Count);
-        return lst[idx];
+        effectsSource.PlayOneShot(Util.RandomListItem(crashSounds));
     }
 
     IEnumerator FadeIn()

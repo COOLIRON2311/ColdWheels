@@ -8,7 +8,7 @@ public class DirectorScript : MonoBehaviour
     public static DirectorScript Instance { get; private set; }
 
     [SerializeField] private List<GameObject> trackPrefabs = new();
-    [SerializeField] private GameObject playerPrefab;
+    [SerializeField] private List<GameObject> playerPrefabs;
     public GameObject scoreboard;
 
     private Camera camera_;
@@ -71,27 +71,11 @@ public class DirectorScript : MonoBehaviour
     private IEnumerator OnPlayerTurnStarted()
     {
         SoundController.Instance.PlayPhonkMusic();
-        playerGo = Instantiate(playerPrefab, spawnPointGo.transform.position, Quaternion.identity);
+        playerGo = Instantiate(playerPrefabs[currentPlayerIdx], spawnPointGo.transform.position, Quaternion.identity);
         smoothFollowCamera.target = playerGo.transform.GetChild(0);
         PlayerCreator.Instance.SetActivePlayerIndex(currentPlayerIdx);
         activeGameplay = true;
         yield break;
-    }
-
-    private IEnumerator ProcessCamera(float duration = 1.0f)
-    {
-        smoothFollowCamera.target = null;
-        var startPosition = camera_.transform.position;
-        var endPosition = spawnPointGo.transform.position;
-        var elapsedTime = 0f;
-        while (elapsedTime < duration)
-        {
-            camera_.transform.position = Vector3.Lerp(startPosition, endPosition, elapsedTime / duration);
-            elapsedTime += Time.deltaTime;
-            yield return null;
-        }
-        camera_.transform.position = endPosition;
-        StartCoroutine(OnPlayerTurnStarted());
     }
 
     public void EndPlayerTurn(GameObject player = null)

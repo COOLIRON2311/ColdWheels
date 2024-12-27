@@ -598,7 +598,7 @@ GameObject:
   - component: {fileID: 5511999107033415483}
   - component: {fileID: 344804518278850098}
   m_Layer: 0
-  m_Name: TaxiAdvanced
+  m_Name: Taxi Advanced
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

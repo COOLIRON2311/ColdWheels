@@ -16,11 +16,10 @@ public class SettingsMenuScript : MonoBehaviour
         musicSlider.value = soundController.MusicVolume;
         soundSlider.value = soundController.EffectsVolume;
 
-        backButton.onClick.AddListener(() => { 
+        backButton.onClick.AddListener(() => {
             gameObject.SetActive(false);
         });
         musicSlider.onValueChanged.AddListener((float value) => soundController.MusicVolume = value);
         soundSlider.onValueChanged.AddListener((float value) => soundController.EffectsVolume = value);
-
     }
 }
