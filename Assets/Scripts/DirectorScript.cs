@@ -122,6 +122,11 @@ public class DirectorScript : MonoBehaviour
 
     private IEnumerator OnGameEnded()
     {
+        SoundController.Instance.FadeOutMusic();
+        smoothFollowCamera.target = null;
+        smoothFollowCamera.transform.position = new Vector3(0, 80, 0);
+        smoothFollowCamera.transform.LookAt(new Vector3(0, 0, 1f));
+
         if (scoreboard)
         {
             scoreboard.SetActive(true);
