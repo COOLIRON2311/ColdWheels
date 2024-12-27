@@ -857,10 +857,10 @@ GameObject:
   m_Component:
   - component: {fileID: 461650386}
   - component: {fileID: 461650387}
+  - component: {fileID: 461650391}
   - component: {fileID: 461650390}
   - component: {fileID: 461650389}
   - component: {fileID: 461650388}
-  - component: {fileID: 461650391}
   - component: {fileID: 461650392}
   m_Layer: 0
   m_Name: GameManager
@@ -1131,12 +1131,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trackPrefabs:
+  - {fileID: 7874396468538803721, guid: e151aa8469dc31844b5be8292ef2a98f, type: 3}
   - {fileID: 3971460630435187623, guid: 14339fc123fd30a4b8610953990f09dc, type: 3}
   - {fileID: 4830845817065153081, guid: fd8f12b2af876864ca0cb8c6122d5dc1, type: 3}
   - {fileID: 6490094545549448119, guid: 0fd3c469c3b1ff848ba5308c6dfc047c, type: 3}
   playerPrefab: {fileID: 7183069578657883599, guid: 28c0d2e3b9e027ae580029db80889a0d,
     type: 3}
-  scoreboard: {fileID: 0}
+  scoreboardPrefab: {fileID: 0}
 --- !u!81 &461650392
 AudioListener:
   m_ObjectHideFlags: 0
