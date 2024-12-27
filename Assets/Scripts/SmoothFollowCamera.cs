@@ -16,7 +16,7 @@ public class SmoothFollowCamera : MonoBehaviour
         var desiredPosition = target.position + target.forward * cameraOffset.z + Vector3.up * cameraOffset.y;
 
         // Плавно интерполируем позицию камеры
-        var smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
+        var smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, 1f);
 
         // Устанавливаем новую позицию камеры
         transform.position = smoothedPosition;
