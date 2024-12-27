@@ -16,7 +16,7 @@ public class DirectorScript : MonoBehaviour
     private GameObject spawnPointGo;
     private GameObject trackGo;
     private GameObject playerGo;
-    
+
     private int currentTrackIdx;
     private int currentPlayerIdx;
     private bool activeGameplay;
@@ -41,7 +41,7 @@ public class DirectorScript : MonoBehaviour
     {
         StartCoroutine(OnGameStarted());
     }
-    
+
     private IEnumerator OnGameStarted()
     {
         currentTrackIdx = 0;
@@ -70,6 +70,7 @@ public class DirectorScript : MonoBehaviour
 
     private IEnumerator OnPlayerTurnStarted()
     {
+        SoundController.Instance.PlayPhonkMusic();
         playerGo = Instantiate(playerPrefab, spawnPointGo.transform.position, Quaternion.identity);
         smoothFollowCamera.target = playerGo.transform.GetChild(0);
         activeGameplay = true;

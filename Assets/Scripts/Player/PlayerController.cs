@@ -12,10 +12,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] List<Transform> wheelModels;
     [SerializeField] LayerMask surfaceLayer;
     [Header("Impuls Configuration")]
-    public float acceleration = 10f; 
+    public float acceleration = 10f;
     public float maxSpeed = 20f;
     public float maxTurnSpeed = 20f;
-    public float deceleration = 5f; 
+    public float deceleration = 5f;
 
     [Header("Movement Settings")]
     public float speed = 5f;
@@ -47,10 +47,10 @@ public class PlayerController : MonoBehaviour
         //carMesh.transform.position = Vector3.Lerp(lastPos, transform.position, lerpValue);
         //var lastTurnAngleQuat = Quaternion.Euler(0, lastTurnAngle, 0);
         //var turnAngleQuat = Quaternion.Euler(0, turnAngle, 0);
-        //carMesh.transform.localRotation = Quaternion.Lerp(lastTurnAngleQuat, turnAngleQuat, lerpValue); 
+        //carMesh.transform.localRotation = Quaternion.Lerp(lastTurnAngleQuat, turnAngleQuat, lerpValue);
     }
 
-    void FixedUpdate() 
+    void FixedUpdate()
     {
         currentSpeed = rb.velocity.magnitude;
         if (!controls && currentSpeed <= 0.1)
@@ -97,7 +97,7 @@ public class PlayerController : MonoBehaviour
             //rb.AddForce(breakForce, ForceMode.Force);
         }
 
-        
+
     }
 
     void HandleMovement()
@@ -108,7 +108,7 @@ public class PlayerController : MonoBehaviour
         //rb.MovePosition(rb.position + movement);
 
         //lastTurnAngle = turnAngle;
-        //turnAngle = horizontalInput * 30f; 
+        //turnAngle = horizontalInput * 30f;
 
 
         float horizontalInput = Input.GetAxis("Horizontal");
@@ -142,11 +142,20 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other) 
+    private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("DisableControls"))
         {
+            SoundController.Instance.FadeOutMusic();
             controls = false;
+        }
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("Obstacle"))
+        {
+            SoundController.Instance.PlayCrashSound();
         }
     }
 
