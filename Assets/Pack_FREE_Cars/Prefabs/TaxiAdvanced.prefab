@@ -647,9 +647,9 @@ MonoBehaviour:
   surfaceLayer:
     serializedVersion: 2
     m_Bits: 1
-  acceleration: 80
+  acceleration: 40
   maxSpeed: 20
-  maxTurnSpeed: 30
+  maxTurnSpeed: 60
   deceleration: 10
   speed: 5
   turnSpeed: 10

@@ -68,58 +68,41 @@ public class PlayerController : MonoBehaviour
 
     void HandleImpulseCharge()
     {
-        // OLD
-        //if (controls && Input.GetKey(KeyCode.Space))
-        //{
-        //    currentSpeed += acceleration * Time.fixedDeltaTime;
-        //    currentSpeed = Mathf.Clamp(currentSpeed, 0, maxSpeed);
-
-        //}
-        //else
-        //{
-        //    currentSpeed -= deceleration * Time.fixedDeltaTime;
-        //    currentSpeed = Mathf.Max(currentSpeed, 0);
-        //}
-        //Vector3 forwardMovement = Vector3.forward * currentSpeed * Time.fixedDeltaTime;
-        //rb.MovePosition(rb.position + forwardMovement);
-
         if (controls && Input.GetKey(KeyCode.W))
         {
             Vector3 force = transform.forward * rb.mass * acceleration;
             rb.AddForce(force, ForceMode.Force);
         }
-        else
-        {
-            //Vector3 breakForce = -rb.velocity;
-            ////breakForce.y = 0;  // Игнорируем вертикальную скорость
-            //breakForce.Normalize();  // Приводим к единичному вектору
-            //breakForce *= deceleration * rb.mass;
-            //rb.AddForce(breakForce, ForceMode.Force);
-        }
-
-        
     }
 
     void HandleMovement()
     {
-        // OLD
-        //float horizontalInput = Input.GetAxis("Horizontal");
-        //Vector3 movement = Vector3.right * horizontalInput * speed * Time.fixedDeltaTime;
-        //rb.MovePosition(rb.position + movement);
-
-        //lastTurnAngle = turnAngle;
-        //turnAngle = horizontalInput * 30f; 
-
-
         float horizontalInput = Input.GetAxis("Horizontal");
-        // Угол поворота колёс
-        turnAngle = horizontalInput * turnSpeed;
+        float verticalInput = Input.GetAxis("Vertical");
+        var rearRightWheel = wheelColliders[0];
+        var rearLeftWheel = wheelColliders[1];
+        var frontRightWheel = wheelColliders[2];
+        var frontLeftWheel = wheelColliders[3];
 
-        // Применение момента вращения для поворота
-        Vector3 torque = transform.up * horizontalInput * rb.mass * turnSpeed;
-        rb.AddTorque(torque, ForceMode.Force);
-    }
+        float steerAngle = -horizontalInput * turnSpeed;
+        frontLeftWheel.steerAngle = steerAngle;
+        frontRightWheel.steerAngle = steerAngle;
 
+        float torque = verticalInput * rb.mass * 10f;
+        rearLeftWheel.motorTorque = torque;
+        rearRightWheel.motorTorque = torque;
+
+        if (Input.GetKey(KeyCode.Space))
+        {
+            rearLeftWheel.brakeTorque = rb.mass * 40f;
+            rearRightWheel.brakeTorque = rb.mass * 40f;
+        }
+        else
+        {
+            rearLeftWheel.brakeTorque = 0f;
+            rearRightWheel.brakeTorque = 0f;
+        }
+    }   
     void AdjustFrictionBasedOnPhysicsMaterial()
     {
         foreach (var wheel in wheelColliders)
