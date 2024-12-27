@@ -9,48 +9,42 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] GameObject carMesh;
     [SerializeField] List<WheelCollider> wheelColliders;
-    [SerializeField] List<Transform> wheelModels;
     [SerializeField] LayerMask surfaceLayer;
-    [Header("Impuls Configuration")]
-    public float acceleration = 10f; 
+    [Header("Impulse Configuration")]
+    public float acceleration = 10f;
     public float maxSpeed = 20f;
-    public float maxTurnSpeed = 20f;
-    public float deceleration = 5f; 
+    public float maxTurnSpeed = 45f;
 
     [Header("Movement Settings")]
-    public float speed = 5f;
     public float turnSpeed = 5f;
-
+    public float maxTurnAngle = 60f;
+    /// <summary>
+    /// Steering wheel angle
+    /// </summary>
+    private float currentAngle = 0f;
     private bool controls = true;
     private float currentSpeed = 0f;
     private Rigidbody rb;
 
-    private Vector3 lastPos;
-    private float lastTurnAngle;
-    private float turnAngle;
-
     void Start()
     {
-        lastPos = transform.position;
         rb = GetComponentInChildren<Rigidbody>();
         rb.maxLinearVelocity = maxSpeed;
         rb.maxAngularVelocity = maxTurnSpeed;
-        var newCenterOfMass = rb.centerOfMass;
-        newCenterOfMass += new Vector3(0, -0.2f, 0);
-        rb.centerOfMass = newCenterOfMass;
+        // var newCenterOfMass = rb.centerOfMass;
+        // newCenterOfMass += new Vector3(0, -0.2f, 0);
+        // rb.centerOfMass = newCenterOfMass;
     }
 
     void Update()
     {
-        // OLD
-        //var lerpValue = (Time.time - Time.fixedTime) / Time.fixedDeltaTime;
-        //carMesh.transform.position = Vector3.Lerp(lastPos, transform.position, lerpValue);
-        //var lastTurnAngleQuat = Quaternion.Euler(0, lastTurnAngle, 0);
-        //var turnAngleQuat = Quaternion.Euler(0, turnAngle, 0);
-        //carMesh.transform.localRotation = Quaternion.Lerp(lastTurnAngleQuat, turnAngleQuat, lerpValue); 
+        HandleSteering();
+        HandleMovement();
+        HandleImpulseCharge();
+        //AdjustFrictionBasedOnPhysicsMaterial();
     }
 
-    void FixedUpdate() 
+    void FixedUpdate()
     {
         currentSpeed = rb.velocity.magnitude;
         if (!controls && currentSpeed <= 0.1)
@@ -59,11 +53,29 @@ public class PlayerController : MonoBehaviour
             enabled = false;
             return;
         }
-        HandleImpulseCharge();
-        HandleMovement();
-        AdjustFrictionBasedOnPhysicsMaterial();
-        //SyncWheelModels();
-        lastPos = transform.position;
+    }
+
+    void UpdateSteeringWheelAngle()
+    {
+        float delta = 0 - currentAngle;
+        if (Mathf.Abs(delta) < 1e-3)
+        {
+            currentAngle = 0;
+            return;
+        }
+        currentAngle += delta * turnSpeed * Time.deltaTime;
+    }
+
+    void HandleSteering()
+    {
+        float horizontalInput = Input.GetAxis("Horizontal");
+        if (horizontalInput == 0)
+        { // Nobody touches the steering wheel. It returns to default position
+            UpdateSteeringWheelAngle();
+            return;
+        }
+        if (Mathf.Abs(currentAngle) < maxTurnAngle)
+            currentAngle += Mathf.Sign(horizontalInput) * turnSpeed * Time.deltaTime;
     }
 
     void HandleImpulseCharge()
@@ -77,32 +89,19 @@ public class PlayerController : MonoBehaviour
 
     void HandleMovement()
     {
-        float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
-        var rearRightWheel = wheelColliders[0];
-        var rearLeftWheel = wheelColliders[1];
-        var frontRightWheel = wheelColliders[2];
-        var frontLeftWheel = wheelColliders[3];
+        var frontLeftWheel = wheelColliders[0];
+        var frontRightWheel = wheelColliders[1];
+        var rearLeftWheel = wheelColliders[2];
+        var rearRightWheel = wheelColliders[3];
 
-        float steerAngle = -horizontalInput * turnSpeed;
-        frontLeftWheel.steerAngle = steerAngle;
-        frontRightWheel.steerAngle = steerAngle;
+        frontLeftWheel.steerAngle = currentAngle;
+        frontRightWheel.steerAngle = currentAngle;
 
-        float torque = verticalInput * rb.mass * 10f;
-        rearLeftWheel.motorTorque = torque;
-        rearRightWheel.motorTorque = torque;
-
-        if (Input.GetKey(KeyCode.Space))
-        {
-            rearLeftWheel.brakeTorque = rb.mass * 40f;
-            rearRightWheel.brakeTorque = rb.mass * 40f;
-        }
-        else
-        {
-            rearLeftWheel.brakeTorque = 0f;
-            rearRightWheel.brakeTorque = 0f;
-        }
-    }   
+        // float torque = verticalInput * rb.mass * 10f;
+        // rearLeftWheel.motorTorque = torque;
+        // rearRightWheel.motorTorque = torque;
+    }
     void AdjustFrictionBasedOnPhysicsMaterial()
     {
         foreach (var wheel in wheelColliders)
@@ -110,22 +109,22 @@ public class PlayerController : MonoBehaviour
             if (Physics.Raycast(wheel.transform.position, -wheel.transform.up, out RaycastHit hit, wheel.suspensionDistance + wheel.radius, surfaceLayer))
             {
                 PhysicMaterial surfaceMaterial = hit.collider.material;
-                float fricton = surfaceMaterial == null ? 1f : surfaceMaterial.dynamicFriction;
+                float friction = surfaceMaterial == null ? 1f : surfaceMaterial.dynamicFriction;
 
                 var forwardFriction = wheel.forwardFriction;
-                forwardFriction.stiffness = fricton;
+                forwardFriction.stiffness = friction;
                 wheel.forwardFriction = forwardFriction;
 
                 var sidewaysFriction = wheel.sidewaysFriction;
-                sidewaysFriction.stiffness = fricton;
+                sidewaysFriction.stiffness = friction;
                 wheel.sidewaysFriction = sidewaysFriction;
 
-                Debug.Log("Friction changed");
+                // Debug.Log("Friction changed");
             }
         }
     }
 
-    private void OnTriggerEnter(Collider other) 
+    private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("DisableControls"))
         {

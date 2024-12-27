@@ -140,10 +140,10 @@ WheelCollider:
     m_AsymptoteValue: 0.5
     m_Stiffness: 1
   m_SidewaysFriction:
-    m_ExtremumSlip: 0.2
+    m_ExtremumSlip: 0.4
     m_ExtremumValue: 1
-    m_AsymptoteSlip: 0.5
-    m_AsymptoteValue: 0.75
+    m_AsymptoteSlip: 0.8
+    m_AsymptoteValue: 0.5
     m_Stiffness: 1
   m_IncludeLayers:
     serializedVersion: 2
@@ -294,10 +294,10 @@ WheelCollider:
     m_AsymptoteValue: 0.5
     m_Stiffness: 1
   m_SidewaysFriction:
-    m_ExtremumSlip: 0.2
+    m_ExtremumSlip: 0.4
     m_ExtremumValue: 1
-    m_AsymptoteSlip: 0.5
-    m_AsymptoteValue: 0.75
+    m_AsymptoteSlip: 0.8
+    m_AsymptoteValue: 0.5
     m_Stiffness: 1
   m_IncludeLayers:
     serializedVersion: 2
@@ -448,10 +448,10 @@ WheelCollider:
     m_AsymptoteValue: 0.5
     m_Stiffness: 1
   m_SidewaysFriction:
-    m_ExtremumSlip: 0.2
+    m_ExtremumSlip: 0.4
     m_ExtremumValue: 1
-    m_AsymptoteSlip: 0.5
-    m_AsymptoteValue: 0.75
+    m_AsymptoteSlip: 0.8
+    m_AsymptoteValue: 0.5
     m_Stiffness: 1
   m_IncludeLayers:
     serializedVersion: 2
@@ -639,20 +639,14 @@ MonoBehaviour:
   - {fileID: 6359166837884131932}
   - {fileID: 4046755107537157966}
   - {fileID: 8675978625883416579}
-  wheelModels:
-  - {fileID: 1473380620398471021}
-  - {fileID: 9214204700773055137}
-  - {fileID: 7380252679865222618}
-  - {fileID: 8481539329708107718}
   surfaceLayer:
     serializedVersion: 2
     m_Bits: 1
-  acceleration: 40
+  acceleration: 10
   maxSpeed: 20
-  maxTurnSpeed: 60
-  deceleration: 10
-  speed: 5
-  turnSpeed: 10
+  maxTurnSpeed: 90
+  turnSpeed: 30
+  maxTurnAngle: 45
 --- !u!54 &5511999107033415483
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -841,10 +835,10 @@ WheelCollider:
     m_AsymptoteValue: 0.5
     m_Stiffness: 1
   m_SidewaysFriction:
-    m_ExtremumSlip: 0.2
+    m_ExtremumSlip: 0.4
     m_ExtremumValue: 1
-    m_AsymptoteSlip: 0.5
-    m_AsymptoteValue: 0.75
+    m_AsymptoteSlip: 0.8
+    m_AsymptoteValue: 0.5
     m_Stiffness: 1
   m_IncludeLayers:
     serializedVersion: 2
