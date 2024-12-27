@@ -896,7 +896,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78948be1a0cc6954789e45a12e445a6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxPlayers: 2
+  maxPlayers: 3
   minPlayerNameLength: 1
   maxPlayerNameLength: 10
 --- !u!82 &461650388
@@ -1136,8 +1136,7 @@ MonoBehaviour:
   - {fileID: 6490094545549448119, guid: 0fd3c469c3b1ff848ba5308c6dfc047c, type: 3}
   playerPrefab: {fileID: 7183069578657883599, guid: 28c0d2e3b9e027ae580029db80889a0d,
     type: 3}
-  scoreboardPrefab: {fileID: 1773871734005605396, guid: 7aeb9489296ebb75db1d02dba0fbe674,
-    type: 3}
+  scoreboard: {fileID: 0}
 --- !u!81 &461650392
 AudioListener:
   m_ObjectHideFlags: 0

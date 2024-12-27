@@ -16,7 +16,8 @@ public class MainMenuScript : MonoBehaviour
 
     void Start()
     {
-        startButton.onClick.AddListener(() => { 
+        startButton.onClick.AddListener(() => {
+            PlayerCreator.Instance.Clear();
             choosePanel.gameObject.SetActive(true);
             choosePanel.Clear();
         });

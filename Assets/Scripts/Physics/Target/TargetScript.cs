@@ -11,16 +11,20 @@ public class TargetScript : MonoBehaviour
 
     public void CollisionDetected(TargetType type)
     {
+        var playerCreator = PlayerCreator.Instance;
         switch (type)
         {
             case TargetType.Easy:
-                print($"{pointsEasy} points");
+                Debug.Log("Collision");
+                playerCreator.AddActivePlayerScore(pointsEasy);
                 break;
             case TargetType.Medium:
-                print($"{pointsMedium} points");
+                Debug.Log("Collision");
+                playerCreator.AddActivePlayerScore(pointsMedium);
                 break;
             case TargetType.Hard:
-                print($"{pointsHard} points");
+                Debug.Log("Collision");
+                playerCreator.AddActivePlayerScore(pointsHard);
                 break;
             default:
                 break;

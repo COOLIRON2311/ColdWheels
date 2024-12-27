@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class PlayerCreator : MonoBehaviour
@@ -13,12 +15,17 @@ public class PlayerCreator : MonoBehaviour
 
     public static PlayerCreator Instance { get; private set; }
 
+    public Action OnActivePlayerChanged;
+    public Action OnScoreChanged;
+
     public int MaxPlayers { get => maxPlayers; }
     public int MaxPlayerNameLength { get => maxPlayerNameLength; }
     public int MinPlayerNameLength { get => minPlayerNameLength; }
     public int PlayersCount { get; set; }
 
     List<PlayerInfo> players = new();
+
+    int activePlayerIndex = 0;
 
     void Awake()
     {
@@ -31,6 +38,31 @@ public class PlayerCreator : MonoBehaviour
             Destroy(gameObject);
         }
         DontDestroyOnLoad(gameObject);
+    }
+
+    public void SetActivePlayerIndex(int index)
+    {
+        activePlayerIndex = index;
+        OnActivePlayerChanged?.Invoke();
+    }
+    public void AddActivePlayerScore(int score)
+    {
+        players[activePlayerIndex].Score += score;
+        OnScoreChanged?.Invoke();
+    }
+    public PlayerInfo GetActivePlayerInfo()
+    {
+        return players[activePlayerIndex];
+    }
+
+    public List<PlayerInfo> GetPlayersInfos()
+    {
+        return players;
+    }
+
+    public List<PlayerInfo> GetOrderedByScorePlayersInfos()
+    {
+        return players.OrderByDescending(pi => pi.Score).ToList();
     }
 
     public void AddPlayer(string name)

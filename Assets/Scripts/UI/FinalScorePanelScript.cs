@@ -16,8 +16,6 @@ public class FinalScorePanelScript : MonoBehaviour
     void Start()
     {
         okButton.onClick.AddListener(() => { SceneManager.LoadScene(sceneToLoadName); });
-
-        scorePanelScript.UpdatePlayerScores(new List<PlayerInfo>()); // TODO get player score;
     }
 
 }

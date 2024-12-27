@@ -9,7 +9,7 @@ public class DirectorScript : MonoBehaviour
 
     [SerializeField] private List<GameObject> trackPrefabs = new();
     [SerializeField] private GameObject playerPrefab;
-    [SerializeField] private GameObject scoreboardPrefab;
+    public GameObject scoreboard;
 
     private Camera camera_;
     private SmoothFollowCamera smoothFollowCamera;
@@ -73,6 +73,7 @@ public class DirectorScript : MonoBehaviour
         SoundController.Instance.PlayPhonkMusic();
         playerGo = Instantiate(playerPrefab, spawnPointGo.transform.position, Quaternion.identity);
         smoothFollowCamera.target = playerGo.transform.GetChild(0);
+        PlayerCreator.Instance.SetActivePlayerIndex(currentPlayerIdx);
         activeGameplay = true;
         yield break;
     }
@@ -106,7 +107,7 @@ public class DirectorScript : MonoBehaviour
         playerGo.GetComponent<PlayerController>().enabled = false;
         playerGo = null;
         yield return new WaitForSeconds(1.0f);
-        if (currentPlayerIdx + 1 >= PlayerCreator.Instance.MaxPlayers)
+        if (currentPlayerIdx + 1 >= PlayerCreator.Instance.PlayersCount)
         {
             StartCoroutine(OnMapEnded());
         }
@@ -137,9 +138,9 @@ public class DirectorScript : MonoBehaviour
 
     private IEnumerator OnGameEnded()
     {
-        if (scoreboardPrefab)
+        if (scoreboard)
         {
-            Instantiate(scoreboardPrefab, Vector3.zero, Quaternion.identity);
+            scoreboard.SetActive(true);
         }
         else
         {
