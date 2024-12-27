@@ -14,6 +14,9 @@ public class TargetInnerScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        targetScript.CollisionDetected(targetType);
+        if (other.CompareTag("Player"))
+        {
+            targetScript.CollisionDetected(targetType);
+        }
     }
 }

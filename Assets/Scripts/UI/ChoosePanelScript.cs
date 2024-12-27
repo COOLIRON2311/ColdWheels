@@ -40,9 +40,9 @@ public class ChoosePanelScript : MonoBehaviour
             playerNameScript.OnApplyButtonClick += () =>
             {
                 SoundController.Instance.StopMusic();
-                SceneManager.LoadScene("Game");
+                DirectorScript.Instance.StartGame();
             };
-            playerNameScript.SetApplyButtonText("Готово");
+            playerNameScript.SetApplyButtonText("Р“РѕС‚РѕРІРѕ");
         }
         else
         {
@@ -71,7 +71,7 @@ public class ChoosePanelScript : MonoBehaviour
         playerNameWindows[index].gameObject.SetActive(true);
     }
 
-    // В тупую, устал
+    // Р’ С‚СѓРїСѓСЋ, СѓСЃС‚Р°Р»
     private void ClearNameWindows()
     {
         foreach(var playerNameScript in playerNameWindows)

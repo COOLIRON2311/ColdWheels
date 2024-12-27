@@ -860,6 +860,8 @@ GameObject:
   - component: {fileID: 461650390}
   - component: {fileID: 461650389}
   - component: {fileID: 461650388}
+  - component: {fileID: 461650391}
+  - component: {fileID: 461650392}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1101,13 +1103,49 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3d428d5c1dc1e34fa075637294e1361, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeSeconds: 5
+  fadeInSeconds: 5
+  fadeOutSeconds: 2
   musicSource: {fileID: 461650389}
   effectsSource: {fileID: 461650388}
   menuMusic: {fileID: 8300000, guid: 0953d59940df121429c8a0451b0b8876, type: 3}
   phonkMusic:
   - {fileID: 8300000, guid: 4f6243a3fecf8574faae4cd7a74d784e, type: 3}
   - {fileID: 8300000, guid: fc3717f063e4cf24caed60b61d993043, type: 3}
+  - {fileID: 8300000, guid: 0912fcc0da3e3ea499e043185109269b, type: 3}
+  - {fileID: 8300000, guid: bd8066ab468916741aba0038f1720523, type: 3}
+  crashSounds:
+  - {fileID: 8300000, guid: 73c2c3dce0da9544b965fa3d9b6444b6, type: 3}
+  - {fileID: 8300000, guid: 14cc564d9f9a8ef479a363c72ef18675, type: 3}
+  - {fileID: 8300000, guid: 8007ac08ea3c3084798fa58343b8a518, type: 3}
+  - {fileID: 8300000, guid: 8f5b5aeb7ad9840488ed55a87796b75a, type: 3}
+--- !u!114 &461650391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 461650385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 739822d2007befdc8b07a1de1615b543, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trackPrefabs:
+  - {fileID: 3971460630435187623, guid: 14339fc123fd30a4b8610953990f09dc, type: 3}
+  - {fileID: 4830845817065153081, guid: fd8f12b2af876864ca0cb8c6122d5dc1, type: 3}
+  - {fileID: 6490094545549448119, guid: 0fd3c469c3b1ff848ba5308c6dfc047c, type: 3}
+  playerPrefab: {fileID: 7183069578657883599, guid: 28c0d2e3b9e027ae580029db80889a0d,
+    type: 3}
+  scoreboardPrefab: {fileID: 1773871734005605396, guid: 7aeb9489296ebb75db1d02dba0fbe674,
+    type: 3}
+--- !u!81 &461650392
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 461650385}
+  m_Enabled: 1
 --- !u!1 &469835751
 GameObject:
   m_ObjectHideFlags: 0
@@ -3901,7 +3939,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1828386657}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &1828386659
 Camera:
   m_ObjectHideFlags: 0

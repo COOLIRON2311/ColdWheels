@@ -9,24 +9,27 @@ public class SoundController : MonoBehaviour
     public static SoundController Instance {  get; private set; }
 
     [SerializeField]
-    private float fadeSeconds = 5;
+    private float fadeInSeconds = 5;
+    [SerializeField]
+    private float fadeOutSeconds = 2;
     [SerializeField]
     private AudioSource musicSource;
     [SerializeField]
     private AudioSource effectsSource;
     public AudioClip menuMusic;
     public List<AudioClip> phonkMusic;
+    public List<AudioClip> crashSounds;
 
-    public float MusicVolume { 
-        get => musicSource.volume; 
-        set { 
+    public float MusicVolume {
+        get => musicSource.volume;
+        set {
             musicSource.volume = value;
             musicVolume = value;
         }
     }
-    public float EffectsVolume { 
+    public float EffectsVolume {
         get => effectsSource.volume;
-        set { 
+        set {
             effectsSource.volume = value;
             effectsVolume = value;
         }
@@ -87,6 +90,12 @@ public class SoundController : MonoBehaviour
         musicSource.Stop();
     }
 
+    public void FadeOutMusic()
+    {
+        musicType = MusicType.None;
+        StartCoroutine(FadeOut());
+    }
+
     public void PlayMainMenuMusic()
     {
         musicType = MusicType.MainMenu;
@@ -99,9 +108,9 @@ public class SoundController : MonoBehaviour
         musicSource.Stop();
     }
 
-    public void PlaySound(AudioClip sound)
+    public void PlayCrashSound()
     {
-        effectsSource.PlayOneShot(sound);
+        effectsSource.PlayOneShot(RandomListItem(crashSounds));
     }
 
     private static T RandomListItem<T>(List<T> lst)
@@ -117,9 +126,21 @@ public class SoundController : MonoBehaviour
 
         while (musicSource.volume < musicVolume)
         {
-            musicSource.volume = Mathf.Lerp(0, musicVolume.Value, timeElapsed / fadeSeconds);
+            musicSource.volume = Mathf.Lerp(0, musicVolume.Value, timeElapsed / fadeInSeconds);
             timeElapsed += Time.deltaTime;
             yield return null;
         }
+    }
+
+    IEnumerator FadeOut()
+    {
+        float timeElapsed = 0;
+        while (musicSource.volume > 0)
+        {
+            musicSource.volume = Mathf.Lerp(musicVolume.Value, 0, timeElapsed / fadeOutSeconds);
+            timeElapsed += Time.deltaTime;
+            yield return null;
+        }
+        musicSource.Stop();
     }
 }
