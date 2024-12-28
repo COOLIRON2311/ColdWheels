@@ -16,7 +16,15 @@ public class TargetInnerScript : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            targetScript.CollisionDetected(targetType);
+            targetScript.CollisionDetected(targetType,1);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            targetScript.CollisionDetected(targetType,-1);
         }
     }
 }

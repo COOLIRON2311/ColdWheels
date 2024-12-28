@@ -50,6 +50,7 @@ public class PlayerCreator : MonoBehaviour
         players[activePlayerIndex].Score += score;
         OnScoreChanged?.Invoke();
     }
+
     public PlayerInfo GetActivePlayerInfo()
     {
         return players[activePlayerIndex];

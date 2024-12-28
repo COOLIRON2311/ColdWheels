@@ -88,7 +88,8 @@ public class DirectorScript : MonoBehaviour
 
     private IEnumerator OnPlayerTurnEnded()
     {
-        playerGo.GetComponent<PlayerController>().enabled = false;
+        playerGo.GetComponent<CarController>().enabled = false;
+        playerGo.tag = "Obstacle";
         playerGo = null;
         yield return new WaitForSeconds(1.0f);
         if (currentPlayerIdx + 1 >= PlayerCreator.Instance.PlayersCount)

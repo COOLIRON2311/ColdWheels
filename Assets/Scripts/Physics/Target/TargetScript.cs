@@ -9,22 +9,22 @@ public class TargetScript : MonoBehaviour
     public int pointsMedium = 100;
     public int pointsHard = 200;
 
-    public void CollisionDetected(TargetType type)
+    public void CollisionDetected(TargetType type, int points_type)
     {
         var playerCreator = PlayerCreator.Instance;
         switch (type)
         {
             case TargetType.Easy:
                 Debug.Log("Collision");
-                playerCreator.AddActivePlayerScore(pointsEasy);
+                playerCreator.AddActivePlayerScore(pointsEasy * points_type);
                 break;
             case TargetType.Medium:
                 Debug.Log("Collision");
-                playerCreator.AddActivePlayerScore(pointsMedium);
+                playerCreator.AddActivePlayerScore(pointsMedium * points_type);
                 break;
             case TargetType.Hard:
                 Debug.Log("Collision");
-                playerCreator.AddActivePlayerScore(pointsHard);
+                playerCreator.AddActivePlayerScore(pointsHard * points_type);
                 break;
             default:
                 break;
