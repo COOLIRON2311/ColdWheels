@@ -19,19 +19,25 @@ public class ScorePanelScript : MonoBehaviour
         scores = new List<PlayerScoreScript>();
 
         var playerCreator = PlayerCreator.Instance;
-        playerCreator.OnScoreChanged += () =>
-        {
-            var orderedInfos = playerCreator.GetOrderedByScorePlayersInfos();
-            UpdatePlayerScores(orderedInfos);
-        };
+        playerCreator.OnScoreChanged += OnScoreChanged;
 
         UpdatePlayerScores(playerCreator.GetOrderedByScorePlayersInfos());
     }
 
+    private void OnDestroy()
+    {
+        PlayerCreator.Instance.OnScoreChanged -= OnScoreChanged;
+    }
+
+    private void OnScoreChanged()
+    {
+        var orderedInfos = PlayerCreator.Instance.GetOrderedByScorePlayersInfos();
+        UpdatePlayerScores(orderedInfos);
+    }
 
     public void UpdatePlayerScores(List<PlayerInfo> playersInfos)
     {
-        var parentTransform = transform;
+        var parentTransform = gameObject.transform;
         if (scoreHolder != null)
         {
             parentTransform = scoreHolder.transform;
