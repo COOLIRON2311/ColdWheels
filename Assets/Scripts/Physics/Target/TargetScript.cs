@@ -15,15 +15,15 @@ public class TargetScript : MonoBehaviour
         switch (type)
         {
             case TargetType.Easy:
-                Debug.Log("Collision");
+                // Debug.Log("Collision");
                 playerCreator.AddActivePlayerScore(pointsEasy * points_type);
                 break;
             case TargetType.Medium:
-                Debug.Log("Collision");
+                // Debug.Log("Collision");
                 playerCreator.AddActivePlayerScore(pointsMedium * points_type);
                 break;
             case TargetType.Hard:
-                Debug.Log("Collision");
+                // Debug.Log("Collision");
                 playerCreator.AddActivePlayerScore(pointsHard * points_type);
                 break;
             default:

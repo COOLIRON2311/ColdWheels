@@ -16,7 +16,7 @@ public class TargetInnerScript : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            targetScript.CollisionDetected(targetType,1);
+            targetScript.CollisionDetected(targetType, 1);
         }
     }
 
@@ -24,7 +24,7 @@ public class TargetInnerScript : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            targetScript.CollisionDetected(targetType,-1);
+            targetScript.CollisionDetected(targetType, -1);
         }
     }
 }

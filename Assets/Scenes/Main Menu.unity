@@ -1131,14 +1131,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trackPrefabs:
-  - {fileID: 7874396468538803721, guid: e151aa8469dc31844b5be8292ef2a98f, type: 3}
   - {fileID: 3971460630435187623, guid: 14339fc123fd30a4b8610953990f09dc, type: 3}
   - {fileID: 4830845817065153081, guid: fd8f12b2af876864ca0cb8c6122d5dc1, type: 3}
   - {fileID: 6490094545549448119, guid: 0fd3c469c3b1ff848ba5308c6dfc047c, type: 3}
   playerPrefabs:
+  - {fileID: 8160049463398649625, guid: a87038334f7300f46811159e43a5c5cd, type: 3}
   - {fileID: 6581833786009714623, guid: c2a1d95ca3ec0ae419d8473b3fc890f6, type: 3}
-  - {fileID: 6581833786009714623, guid: c2a1d95ca3ec0ae419d8473b3fc890f6, type: 3}
-  - {fileID: 6581833786009714623, guid: c2a1d95ca3ec0ae419d8473b3fc890f6, type: 3}
+  - {fileID: 7769690492283750692, guid: 2d1ff0497a835ec4b89840e12b37b39b, type: 3}
   scoreboard: {fileID: 0}
 --- !u!81 &461650392
 AudioListener:

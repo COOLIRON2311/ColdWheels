@@ -12,7 +12,7 @@ public struct Wheel
     {
         Vector3 position;
         Quaternion rotation;
-        
+
         wheelCollider.GetWorldPose(out position, out rotation);
 
         wheelMesh.position = position;
@@ -36,10 +36,10 @@ public class CarController : MonoBehaviour
     [Header("Car settings")]
     [SerializeField,Range(1,5000)] private int motorForce;
 
-    private const float MIN_SPEED = 1.0f; 
+    private const float MIN_SPEED = 1.0f;
 
     private Rigidbody _carRigidbody;
-    
+
     private float _verticalInput;
     private float _horizontalInput;
     private float _speed;
@@ -65,6 +65,7 @@ public class CarController : MonoBehaviour
             DirectorScript.Instance.EndPlayerTurn(gameObject);
         }
     }
+
     private void Move()
     {
         _speed = _carRigidbody.velocity.magnitude;
@@ -83,7 +84,7 @@ public class CarController : MonoBehaviour
             wheel.UpdateMeshPosition();
         }
 
-        Debug.Log(_speed);
+        // Debug.Log(_speed);
     }
 
     private void RotateWheels()
@@ -109,7 +110,7 @@ public class CarController : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.CompareTag("Obstacle"))
+        if (other.gameObject.CompareTag("Obstacle") && !gameObject.CompareTag("Obstacle"))
         {
             SoundController.Instance.PlayCrashSound();
         }
