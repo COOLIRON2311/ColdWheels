@@ -87,7 +87,7 @@ public class CarController : MonoBehaviour
     IEnumerator SecondCheckCarOverturned()
     {
         yield return new WaitForSeconds(overturnTimeout);
-         if (Vector3.Dot(transform.up, Vector3.up) > 0)
+         if (Vector3.Dot(transform.up, Vector3.up) > overturnThreshold)
             yield break;
 
         enabled = false;
