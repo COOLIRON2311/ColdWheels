@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 [Serializable]
@@ -36,6 +37,10 @@ public class CarController : MonoBehaviour
     [Header("Car settings")]
     [SerializeField,Range(1,5000)] private int motorForce;
 
+    [Header("Overturn")]
+    [SerializeField] float overturnThreshold = 0.1f;
+    [SerializeField] float overturnTimeout = 5.0f;
+
     private const float MIN_SPEED = 1.0f;
 
     private Rigidbody _carRigidbody;
@@ -58,12 +63,35 @@ public class CarController : MonoBehaviour
         RotateWheels();
     }
 
+    private void FixedUpdate()
+    {
+        CheckCarOverturned();
+        // print(Vector3.Dot(transform.up, Vector3.up));
+    }
+
     private void CheckSpeedThreshold()
     {
         if (!_controls && _speed <= MIN_SPEED) {
             enabled = false;
             DirectorScript.Instance.EndPlayerTurn(gameObject);
         }
+    }
+
+    private void CheckCarOverturned()
+    {
+        if (Vector3.Dot(transform.up, Vector3.up) > overturnThreshold)
+            return;
+        StartCoroutine(SecondCheckCarOverturned());
+    }
+
+    IEnumerator SecondCheckCarOverturned()
+    {
+        yield return new WaitForSeconds(overturnTimeout);
+         if (Vector3.Dot(transform.up, Vector3.up) > 0)
+            yield break;
+
+        enabled = false;
+        DirectorScript.Instance.EndPlayerTurn(gameObject);
     }
 
     private void Move()
